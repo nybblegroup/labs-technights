@@ -315,6 +315,7 @@ const App = () => {
         <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
           AI Usage Dashboard @ Nybble Group 🚀
         </h1>
+        <p className="text-sm text-slate-400 mt-1">Data as of March 2025</p>
         <p className="text-lg sm:text-xl text-slate-300 mt-2">Hackathon Edition - Insights from the Team! 🤖💡 (79 Survey Respondents)</p>
       </header>
 
