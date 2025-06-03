@@ -548,6 +548,7 @@ const App = () => {
 
       <footer className="text-center mt-12 py-6 border-t border-slate-700">
         <p className="text-slate-400">✨ Happy Hacking from your AI Insights Bot! Keep the great feedback coming! ({data.rawCommentCount} Text Comments Processed) ✨</p>
+        <p className="text-xs text-slate-500 mt-2">Built by tech geeks with Gemini 2.5 Pro and Cursor editor 🤓✨</p>
       </footer>
     </div>
   );
