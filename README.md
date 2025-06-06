@@ -1,4 +1,4 @@
-# labs-technights
+# Top Gun: Tech Labs
 
 ## 00-ai-usage
 
