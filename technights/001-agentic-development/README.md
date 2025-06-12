@@ -11,6 +11,72 @@ Este proyecto implementa un chatbot en Python utilizando LangGraph para gestiona
 - **Interfaz de Usuario con Gradio**: Proporciona una interfaz web simple e interactiva.
 - **Modularidad**: El código está estructurado para separar la lógica de la interfaz, el procesamiento de PDF y la interacción con el modelo de lenguaje.
 
+## Arquitectura del Sistema
+
+```mermaid
+graph TD
+    A["Usuario<br/>Interface<br/>(Gradio)"] --> B["Chatbot<br/>Controller"]
+    B --> C["Estado de<br/>Memoria"]
+    B --> D["PDF<br/>Processor"]
+    
+    subgraph "LangGraph Flow"
+        E["Input<br/>Handler"] --> F["Context<br/>Manager"]
+        F --> G["LLM<br/>(OpenAI)"]
+        G --> H["Response<br/>Generator"]
+        H --> I["Memory<br/>Updater"]
+    end
+    
+    B --> E
+    I --> C
+    D --> F
+    H --> A
+```
+
+## Componentes Principales
+
+### 1. Interfaz de Usuario (Gradio)
+- Proporciona una interfaz gráfica intuitiva para la interacción con el chatbot
+- Permite la carga de documentos PDF
+- Muestra el historial de conversación y las respuestas del chatbot
+
+### 2. Chatbot Controller
+- Actúa como el cerebro central del sistema
+- Coordina la comunicación entre todos los componentes
+- Gestiona el flujo de datos y las operaciones del chatbot
+
+### 3. Estado de Memoria
+- Mantiene un registro del historial de conversación
+- Almacena información contextual relevante
+- Permite que el chatbot mantenga coherencia en la conversación
+
+### 4. PDF Processor
+- Maneja la carga y procesamiento de documentos PDF
+- Extrae texto y contenido relevante
+- Prepara la información para su uso en el contexto de la conversación
+
+### 5. LangGraph Flow
+El flujo de LangGraph consta de varios subcomponentes:
+
+- **Input Handler**: 
+  - Procesa y valida la entrada del usuario
+  - Prepara el texto para su procesamiento
+
+- **Context Manager**:
+  - Gestiona el contexto de la conversación
+  - Integra información del PDF y la memoria
+
+- **LLM (OpenAI)**:
+  - Modelo de lenguaje que genera respuestas
+  - Procesa el contexto y genera respuestas coherentes
+
+- **Response Generator**:
+  - Formatea y estructura las respuestas del LLM
+  - Asegura que las respuestas sean apropiadas
+
+- **Memory Updater**:
+  - Actualiza el estado de la memoria con nueva información
+  - Mantiene la coherencia del historial de conversación
+
 ## Estructura del Proyecto
 
 El proyecto se encuentra contenido dentro del directorio `01-chatbot` y consta de los siguientes archivos principales:
