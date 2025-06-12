@@ -27,7 +27,7 @@ Sigue estos pasos para configurar y ejecutar el chatbot:
 1.  **Navegar al Directorio del Proyecto:**
     Si ya tienes los archivos, simplemente navega al directorio `01-chatbot`:
     ```bash
-    cd 01-chatbot
+    cd technights/001-agentic-development
     ```
 
 2.  **Crear un Archivo `.env` para la Clave API de OpenAI:**
