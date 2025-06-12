@@ -1,0 +1,9 @@
+langchain
+langgraph
+PyPDF2
+gradio
+langchain-community
+langchain-core
+python-dotenv
+langchain-openai
+tiktoken 
