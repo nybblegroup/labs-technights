@@ -18,7 +18,7 @@ try:
     openai_api_key = os.getenv("OPENAI_API_KEY")
     if not openai_api_key:
         raise ValueError("La variable de entorno OPENAI_API_KEY no está configurada.")
-    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, openai_api_key=openai_api_key)
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0, openai_api_key=openai_api_key)
     # Pequeña prueba para asegurar que el LLM está accesible
     llm.invoke("Hola") 
 except Exception as e:
